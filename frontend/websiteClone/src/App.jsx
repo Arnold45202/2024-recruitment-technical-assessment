@@ -4,9 +4,19 @@ import './App.css'
 
 function App() {
   const [isHovered, setIsHovered] = useState(false);
+  const [headerColor, setHeaderColor] = useState('#1e64c7'); 
+
+  const randomColour = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
   return (
-    <>
+    <div>
       <div className='left-bar'>
         <div className='align-middle-with-padding'>
           <div className='logo-div'>
@@ -81,18 +91,24 @@ function App() {
                 <p className='drop-shadow-md text-base sm:text-xs'>
                   DevSoc presents
                 </p>
-                <h1 className='unilectives-title'>
+                <h1
+                  className='unilectives-title'
+                  style={{ color: headerColor }}
+                  onClick={() => setHeaderColor(randomColour())}
+                >
                     unilectives
                 </h1>
                 <p className='description-of-title'>
                     Your one-stop shop for UNSW course and elective reviews.
                 </p>
+                <input placeholder='Search for a course e.g. COMP1511' className='input-box'></input>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
-    </>
+    </div>
   )
 }
 
