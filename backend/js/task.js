@@ -17,14 +17,20 @@ function leafFiles(files) {
  * Task 2
  */
 function kLargestCategories(files, k) {
+    // created a map to count the occurences of each catergory
     const categoryCounts = new Map();
+
+    // this would iterate over the files to populate the categoryCounts map
     files.forEach(file => {
         file.categories.forEach(category => {
             categoryCounts.set(category, (categoryCounts.get(category) || 0) + 1);
         });
     });
 
+    // then it would convery the map into an pair of category and count pairs
     const categoryArray = Array.from(categoryCounts.entries());
+
+    // i want to sort the array in alphabetaical order than i do it by deceding order
     categoryArray.sort((a, b) => {
         if (a[1] === b[1]) {
             return a[0].localeCompare(b[0]);
@@ -32,6 +38,7 @@ function kLargestCategories(files, k) {
         return b[1] - a[1];
     });
 
+    // lastly would map teh sorted array to get teh category names and slice and get teh 0 to k elements 
     return categoryArray.map(entry => entry[0]).slice(0, k);
 }
 
@@ -39,11 +46,11 @@ function kLargestCategories(files, k) {
  * Task 3
  */
 function largestFileSize(files) {
+    // this would check if files is 0 or it wont work
     if (files.length === 0) return 0;
 
-    const parentChildMap = new Map();
-
-    
+    // create a map for the parent -child relationships
+    const parentChildMap = new Map(); 
     files.forEach(file => {
         if (!parentChildMap.has(file.parent)) {
             parentChildMap.set(file.parent, []);
@@ -51,6 +58,7 @@ function largestFileSize(files) {
         parentChildMap.get(file.parent).push(file);
     });
 
+    // this function would calculate the total size of a file and it would use recursive to get its children sizes 
     const calculateTotalSize = (file) => {
         let totalSize = file.size;
         const children = parentChildMap.get(file.id) || [];
@@ -60,6 +68,7 @@ function largestFileSize(files) {
         return totalSize;
     };
 
+        // this would calculate teh totla size 
     let maxSize = 0;
     files.forEach(file => {
         if (file.parent === -1) { 
