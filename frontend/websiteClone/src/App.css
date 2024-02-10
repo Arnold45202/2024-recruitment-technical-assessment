@@ -276,7 +276,7 @@
   align-items: center;
   border: 2.8px solid rgb(156, 173, 233); 
   border-radius: 0.25rem;
-  width: 80%; 
+  width: 100%; 
   box-sizing: border-box; 
 }
 
@@ -316,9 +316,10 @@
 .dropdown-button {
   padding: 0%;
   color: #989898;
+  max-width: 200px;
+  min-width: 150px;
   border: 0.1px solid #989898;
   border-radius: .375rem;
-  width: 220px;
   background-color: #fff;
   cursor: pointer;
   outline: none;
@@ -328,6 +329,9 @@
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
+  z-index: 10;
+  flex: 1 1 0%;
+  width: 83.333333%;
 }
 
 .dropdown-arrow {
