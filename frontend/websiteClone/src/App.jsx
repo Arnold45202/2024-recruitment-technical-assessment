@@ -5,6 +5,7 @@ import './App.css'
 function App() {
   const [isHovered, setIsHovered] = useState(false);
   const [headerColor, setHeaderColor] = useState('#1e64c7'); 
+  const [showDiv, setShowDiv] = useState(false);
 
   const randomColour = () => {
     const letters = '0123456789ABCDEF';
@@ -15,6 +16,7 @@ function App() {
     return color;
   }
 
+ 
   return (
     <div>
       <div className='left-bar'>
@@ -101,7 +103,40 @@ function App() {
                 <p className='description-of-title'>
                     Your one-stop shop for UNSW course and elective reviews.
                 </p>
-                <input placeholder='Search for a course e.g. COMP1511' className='input-box'></input>
+                <div className='search-box-wrapper'>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="magnify-logo">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>
+                  <input 
+                    placeholder='Search for a course e.g. COMP1511' 
+                    className='input-box'
+                    onFocus={() => setShowDiv(true)}></input>
+                </div>
+                {showDiv && (
+                  <div className="centered-div">
+                    <p>yo</p>
+                    <button 
+                      onClick={() => setShowDiv(false)} 
+                      className="close-btn">
+                      close
+                    </button>
+                    <p>hi</p>
+                    <p>I'm Jackson and nice to see you here!</p>
+                    <p>well anyways have a good day today !!</p>
+                  </div>
+                )}
+                <div className="dropdown-container">
+                  <button className="dropdown-button">
+                    <p className='sort-by-text'>
+                      Sort by
+                      <span className="dropdown-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="dropdown-arrow">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                      </span>
+                    </p> 
+                  </button>
+                </div>
               </div>
             </div>
           </div>
