@@ -3,21 +3,74 @@
  * Task 1
  */
 function leafFiles(files) {
-    return [];
+    // this is to create parentIds so its set to store the IDs of all parent files
+    const parentIds = new Set(files.map(file => file.parent).filter(id => id !== -1));
+
+    // this would filter the files to get those are not listed as a parent 
+    // then we can map over the files to extract an array wit hthe names
+    const leafFileNames = files.filter(file => !parentIds.has(file.id)).map(file => file.name);
+
+    return leafFileNames;
 }
 
 /**
  * Task 2
  */
 function kLargestCategories(files, k) {
-    return [];
+    const categoryCounts = new Map();
+    files.forEach(file => {
+        file.categories.forEach(category => {
+            categoryCounts.set(category, (categoryCounts.get(category) || 0) + 1);
+        });
+    });
+
+    const categoryArray = Array.from(categoryCounts.entries());
+    categoryArray.sort((a, b) => {
+        if (a[1] === b[1]) {
+            return a[0].localeCompare(b[0]);
+        }
+        return b[1] - a[1];
+    });
+
+    return categoryArray.map(entry => entry[0]).slice(0, k);
 }
 
 /**
  * Task 3
  */
 function largestFileSize(files) {
-    return 0;
+    if (files.length === 0) return 0;
+
+    const parentChildMap = new Map();
+
+    
+    files.forEach(file => {
+        if (!parentChildMap.has(file.parent)) {
+            parentChildMap.set(file.parent, []);
+        }
+        parentChildMap.get(file.parent).push(file);
+    });
+
+    const calculateTotalSize = (file) => {
+        let totalSize = file.size;
+        const children = parentChildMap.get(file.id) || [];
+        children.forEach(child => {
+            totalSize += calculateTotalSize(child);
+        });
+        return totalSize;
+    };
+
+    let maxSize = 0;
+    files.forEach(file => {
+        if (file.parent === -1) { 
+            const totalSize = calculateTotalSize(file);
+            if (totalSize > maxSize) {
+                maxSize = totalSize;
+            }
+        }
+    });
+
+    return maxSize;
 }
 
 
