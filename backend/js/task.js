@@ -7,14 +7,14 @@ function leafFiles(files) {
 }
 
 /**
- * Task 1
+ * Task 2
  */
 function kLargestCategories(files, k) {
     return [];
 }
 
 /**
- * Task 1
+ * Task 3
  */
 function largestFileSize(files) {
     return 0;
