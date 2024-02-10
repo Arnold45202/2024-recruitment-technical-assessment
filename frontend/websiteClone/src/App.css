@@ -229,7 +229,7 @@
 .description-of-title {
   font-size: 1.1rem;
   line-height: 1rem;
-  font-weight: bold;
+  font-weight: 800;
   justify-content: center;
   margin-top: 0;
   font-family: TT Commons Pro Variable,Segoe UI,Arial,sans-serif;
@@ -377,7 +377,7 @@
   border-radius: 0.75rem;
   cursor: pointer;
   box-sizing: border-box;
-  min-width: 0px;
+  min-width: 450px;
 }
 
 .top-of-subject {
@@ -391,11 +391,11 @@
 }
 
 .titles-subjects {
-  font-weight: 700;
+  font-weight: 800;
   width: 8ch;
   margin: 0;
   font-family: TT Commons Pro Variable,Segoe UI,Arial,sans-serif;
-  font-size: inherit;
+  font-size: 28px;
 }
 
 .text-and-stars {
@@ -459,4 +459,23 @@
   background-color: rgb(204 235 246/var(--tw-bg-opacity));
   border-radius: 9999px;
   font-family: TT Commons Pro Variable,Segoe UI,Arial,sans-serif;
+}
+
+.stars-only {
+  font-size: 1.5em; 
+  color: #ccc; 
+}
+
+.empty-stars,
+.filled-stars {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.filled-stars {
+  color: rgb(183 137 229/var(--tw-bg-opacity));
 }

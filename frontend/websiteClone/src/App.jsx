@@ -146,7 +146,7 @@ function App() {
                           <div className='stars-only'>
                             <div className='stars-in-line'>
                               <span aria-label="rating">★★★★★</span>
-
+                              <span className='filled-stars' style={{width: '96%'}}>★★★★★</span>
                             </div>
                           </div>
                           <p className='text-review'>
@@ -172,7 +172,7 @@ function App() {
                           <div className='stars-only'>
                             <div className='stars-in-line'>
                               <span aria-label="rating">★★★★★</span>
-
+                              <span className='filled-stars' style={{width: '78%'}}>★★★★★</span>
                             </div>
                           </div>
                           <p className='text-review'>
@@ -198,7 +198,7 @@ function App() {
                           <div className='stars-only'>
                             <div className='stars-in-line'>
                               <span aria-label="rating">★★★★★</span>
-
+                              <span className='filled-stars' style={{width: '80%'}}>★★★★★</span>
                             </div>
                           </div>
                           <p className='text-review'>
@@ -224,7 +224,7 @@ function App() {
                           <div className='stars-only'>
                             <div className='stars-in-line'>
                               <span aria-label="rating">★★★★★</span>
-
+                              <span className='filled-stars' style={{width: '80%'}}>★★★★★</span>
                             </div>
                           </div>
                           <p className='text-review'>
@@ -251,7 +251,7 @@ function App() {
                           <div className='stars-only'>
                             <div className='stars-in-line'>
                               <span aria-label="rating">★★★★★</span>
-
+                              <span className='filled-stars' style={{width: '60%'}}>★★★★★</span>
                             </div>
                           </div>
                           <p className='text-review'>
@@ -277,6 +277,7 @@ function App() {
                           <div className='stars-only'>
                             <div className='stars-in-line'>
                               <span aria-label="rating">★★★★★</span>
+                              <span className='filled-stars' style={{width: '80%'}}>★★★★★</span>
                             </div>
                           </div>
                           <p className='text-review'>
