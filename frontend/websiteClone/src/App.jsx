@@ -136,7 +136,163 @@ function App() {
                       </span>
                     </p> 
                   </button>
-                  fdsa
+                </div>
+                <div className='main-boxes'>
+                  <a>
+                    <div className='subject-containers'>
+                      <div className='top-of-subject'>
+                        <h2 className='titles-subjects'>COMP1511</h2>
+                        <div className='text-and-stars'>
+                          <div className='stars-only'>
+                            <div className='stars-in-line'>
+                              <span aria-label="rating">★★★★★</span>
+
+                            </div>
+                          </div>
+                          <p className='text-review'>
+                            144 reviews
+                          </p>
+                        </div>
+                      </div>
+                      <p className='description-of-subject'>
+                        Programming Fundamentals
+                      </p>
+                      <div className='term-subjects'>
+                        <span className='term-subject-exact-terms'>Term 1</span>
+                        <span className='term-subject-exact-terms'>Term 2</span>
+                        <span className='term-subject-exact-terms'>Term 3</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a>
+                    <div className='subject-containers'>
+                      <div className='top-of-subject'>
+                        <h2 className='titles-subjects'>COMP1531</h2>
+                        <div className='text-and-stars'>
+                          <div className='stars-only'>
+                            <div className='stars-in-line'>
+                              <span aria-label="rating">★★★★★</span>
+
+                            </div>
+                          </div>
+                          <p className='text-review'>
+                            47 reviews
+                          </p>
+                        </div>
+                      </div>
+                      <p className='description-of-subject'>
+                        Software Engineering Fundamentals
+                      </p>
+                      <div className='term-subjects'>
+                        <span className='term-subject-exact-terms'>Term 1</span>
+                        <span className='term-subject-exact-terms'>Term 2</span>
+                        <span className='term-subject-exact-terms'>Term 3</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a>
+                    <div className='subject-containers'>
+                      <div className='top-of-subject'>
+                        <h2 className='titles-subjects'>COMP1521</h2>
+                        <div className='text-and-stars'>
+                          <div className='stars-only'>
+                            <div className='stars-in-line'>
+                              <span aria-label="rating">★★★★★</span>
+
+                            </div>
+                          </div>
+                          <p className='text-review'>
+                            40 reviews
+                          </p>
+                        </div>
+                      </div>
+                      <p className='description-of-subject'>
+                        Computer Systems Fundamentals
+                      </p>
+                      <div className='term-subjects'>
+                        <span className='term-subject-exact-terms'>Term 1</span>
+                        <span className='term-subject-exact-terms'>Term 2</span>
+                        <span className='term-subject-exact-terms'>Term 3</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a>
+                    <div className='subject-containers'>
+                      <div className='top-of-subject'>
+                        <h2 className='titles-subjects'>COMP2521</h2>
+                        <div className='text-and-stars'>
+                          <div className='stars-only'>
+                            <div className='stars-in-line'>
+                              <span aria-label="rating">★★★★★</span>
+
+                            </div>
+                          </div>
+                          <p className='text-review'>
+                            36 reviews
+                          </p>
+                        </div>
+                      </div>
+                      <p className='description-of-subject'>
+                        Data Structures and Algorithms
+                      </p>
+                      <div className='term-subjects'>
+                        <span className='term-subject-exact-terms'>Summer</span>
+                        <span className='term-subject-exact-terms'>Term 1</span>
+                        <span className='term-subject-exact-terms'>Term 2</span>
+                        <span className='term-subject-exact-terms'>Term 3</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a>
+                    <div className='subject-containers'>
+                      <div className='top-of-subject'>
+                        <h2 className='titles-subjects'>COMP2511</h2>
+                        <div className='text-and-stars'>
+                          <div className='stars-only'>
+                            <div className='stars-in-line'>
+                              <span aria-label="rating">★★★★★</span>
+
+                            </div>
+                          </div>
+                          <p className='text-review'>
+                            33 reviews
+                          </p>
+                        </div>
+                      </div>
+                      <p className='description-of-subject'>
+                        Object-Oriented Design & Programming
+                      </p>
+                      <div className='term-subjects'>
+                        <span className='term-subject-exact-terms'>Term 1</span>
+                        <span className='term-subject-exact-terms'>Term 2</span>
+                        <span className='term-subject-exact-terms'>Term 3</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a>
+                    <div className='subject-containers'>
+                      <div className='top-of-subject'>
+                        <h2 className='titles-subjects'>COMP3311</h2>
+                        <div className='text-and-stars'>
+                          <div className='stars-only'>
+                            <div className='stars-in-line'>
+                              <span aria-label="rating">★★★★★</span>
+                            </div>
+                          </div>
+                          <p className='text-review'>
+                            33 reviews
+                          </p>
+                        </div>
+                      </div>
+                      <p className='description-of-subject'>
+                        Database Systems
+                      </p>
+                      <div className='term-subjects'>
+                        <span className='term-subject-exact-terms'>Term 1</span>
+                        <span className='term-subject-exact-terms'>Term 3</span>
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
