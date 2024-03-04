@@ -1,2 +1,14 @@
 Please detail the instructions to view your solution here:
 
+After you have git clone to your repo,
+
+change into website clone
+cd websiteClone
+
+install dependices
+Npm install
+
+Run the website, I'm using vite for hosting
+Npm run dev
+
+then the frontend website should be in your localhost5173 
