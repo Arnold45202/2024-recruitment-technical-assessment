@@ -130,3 +130,35 @@ console.assert(arraysEqual(
 ));
 
 console.assert(largestFileSize(testFiles) == 20992)
+
+const nestedFilesTest = [
+    { id: 1, name: "NestedDoc.txt", categories: ["Documents"], parent: 2, size: 500 },
+    { id: 2, name: "SingleParentFolder", categories: ["Folder"], parent: -1, size: 0 }
+];
+
+console.assert(arraysEqual(
+    leafFiles(nestedFilesTest).sort((a, b) => a.localeCompare(b)),
+    ["NestedDoc.txt"]
+), "Test failed: Expected to find 'NestedDoc.txt' as the only leaf file in a nested structure.");
+
+const equalCategoriesTest = [
+    { id: 1, name: "EqualCatDoc1.txt", categories: ["EqualCat1"], parent: -1, size: 100 },
+    { id: 2, name: "EqualCatDoc2.txt", categories: ["EqualCat2"], parent: -1, size: 100 }
+];
+
+console.assert(arraysEqual(
+    kLargestCategories(equalCategoriesTest, 2),
+    ["EqualCat1", "EqualCat2"]
+), "Test failed: Expected categories to be sorted alphabetically when counts are equal.");
+
+const complexFilesTest = [
+    { id: 1, name: "RootFolder", categories: ["Folder"], parent: -1, size: 0 },
+    { id: 2, name: "ChildFolder1", categories: ["Folder"], parent: 1, size: 0 },
+    { id: 3, name: "ChildFolder2", categories: ["Folder"], parent: 1, size: 0 },
+    { id: 4, name: "File1", categories: ["Documents"], parent: 2, size: 1000 },
+    { id: 5, name: "File2", categories: ["Documents"], parent: 3, size: 2000 },
+    { id: 6, name: "SubChildFolder", categories: ["Folder"], parent: 2, size: 0 },
+    { id: 7, name: "FileInSubChild", categories: ["Documents"], parent: 6, size: 3000 }
+];
+
+console.log(largestFileSize(complexFilesTest) === 6000);
